@@ -2,13 +2,14 @@ package com.catalyst.interviews.berlinclock;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import com.catalyst.interviews.berlinclock.BerlinTimeClock;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class BerlinClockBDDSteps {
 
-    private TimeConverter berlinClock;
+    private TimeConverter berlinClock = new BerlinTimeClock();
     private String time;
 
     @Given("^the time is (.*)$")
